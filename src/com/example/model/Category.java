@@ -8,10 +8,6 @@ public class Category {
     public Category() {
     }
 
-    public Category(String name) {
-        this.name = name;
-    }
-
     public Category(int vat) {
         this.vat = vat;
     }
