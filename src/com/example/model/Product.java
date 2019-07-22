@@ -50,6 +50,6 @@ public class Product {
     }
 
     public String showInfo() {
-        return "Produkt:\n" + "nazwa: " + name  + ", opis: " + description + ", cena: " + netPrice + ", kategoria: ";
+        return "Produkt:\n" + "nazwa: " + name  + ", opis: " + description + ", cena netto: " + netPrice + ", cena brutto: ";
     }
 }

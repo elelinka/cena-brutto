@@ -1,34 +1,28 @@
 package com.example.controller;
 
-import com.example.model.Category;
 import com.example.model.Product;
 
 public class ProductController {
 
-    public String whatGrossPrice(Product product) {
-        Category category = new Category();
+    public double whatGrossPrice(Product product) {
         int vat = product.getCategory().getVat();
-        String result = null;
+        double gross;
 
         switch (vat) {
             case 2:
-                result = "nauka";
-                category.setName(result);
+                gross = 1.02 * product.getNetPrice();
                 break;
             case 8:
-                result = "zywnosc";
-                category.setName(result);
+                gross = 1.08 * product.getNetPrice();
                 break;
             case 23:
-                result = "uzywki";
-                category.setName(result);
+                gross = 1.23 * product.getNetPrice();
                 break;
             default:
-                result = "pozostale";
-                category.setName(result);
+                gross = product.getNetPrice();
                 break;
         }
-        return product.showInfo() + result + ", VAT: " + vat;
+        return gross;
 
     }
 }

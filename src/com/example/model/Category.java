@@ -27,4 +27,6 @@ public class Category {
     public void setVat(int vat) {
         this.vat = vat;
     }
+
+
 }
