@@ -5,17 +5,17 @@ import com.example.model.Product;
 public class ProductController {
 
     public double whatGrossPrice(Product product) {
-        int vat = product.getCategory().getVat();
+        String categoryName = product.getCategory().getName();
         double gross;
 
-        switch (vat) {
-            case 2:
+        switch (categoryName) {
+            case "nauka":
                 gross = 1.02 * product.getNetPrice();
                 break;
-            case 8:
+            case "zywnosc":
                 gross = 1.08 * product.getNetPrice();
                 break;
-            case 23:
+            case "uzywki":
                 gross = 1.23 * product.getNetPrice();
                 break;
             default:

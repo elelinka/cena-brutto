@@ -8,8 +8,8 @@ public class Category {
     public Category() {
     }
 
-    public Category(int vat) {
-        this.vat = vat;
+    public Category(String name) {
+        this.name = name;
     }
 
     public String getName() {
